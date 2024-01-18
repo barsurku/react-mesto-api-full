@@ -35,14 +35,14 @@ export function login(email, password) {
   .then((res) => getResponse(res))
     .then((data) => {
       if (data.token) {
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('jwt', data.token);
         return data;
       }
     })
   }
 
 export function getToken() {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('jwt');
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {

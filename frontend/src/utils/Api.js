@@ -20,7 +20,7 @@ class Api {
   }
 
   getUserInfo() {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/users/me`, {
       method: 'GET',
       headers:{
@@ -32,7 +32,7 @@ class Api {
   }
 
   editProfile(data) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/users/me`, {
       method: 'PATCH',
       headers:{
@@ -45,7 +45,7 @@ class Api {
   }
 
   changeProfileAvatar(data) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/users/me/avatar`, {
       method: 'PATCH',
       headers:{
@@ -60,7 +60,7 @@ class Api {
   }
 
   getInitialCards() {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/cards`, {
       method: 'GET',
       headers:{
@@ -72,7 +72,7 @@ class Api {
   }
 
   addNewCard(cardData) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/cards`, {
       method: 'POST',
       headers:{
@@ -85,7 +85,7 @@ class Api {
   }
 
   deleteMyCard(id) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/cards/${id}`, {
       method: 'DELETE',
       headers:{
@@ -97,7 +97,7 @@ class Api {
   }
 
   setCardLike(id) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/cards/${id}/likes`, {
       method: 'PUT',
       headers:{
@@ -109,7 +109,7 @@ class Api {
   }
 
   removeCardLike(id) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     return fetch(`${this.#url}/cards/${id}/likes`, {
       method: 'DELETE',
       headers:{
