@@ -1,0 +1,18 @@
+.sign-up__input {
+    width: 358px;
+    border: 0;
+    border-bottom: 2px solid white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 30px 0 0 0;
+    padding: 0;
+    padding-bottom: 8px;
+    color: #CCCCCC;
+    background-color: transparent;
+}
+
+.sign-up__input::placeholder {
+    color: #CCCCCC;
+  } 

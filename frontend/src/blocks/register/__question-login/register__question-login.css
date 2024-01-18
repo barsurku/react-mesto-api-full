@@ -1,0 +1,10 @@
+.register__question-login {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 80px;
+    text-decoration:none;
+  }
+  
+  .register__question-login:hover {
+    opacity: 0.5;
+}

@@ -1,0 +1,11 @@
+.popup__tooltip-info-text {
+    position: absolute;
+    width: 358px;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29px;
+    text-align: center;
+    margin: 212px auto 60px auto;
+    color: #000000;
+}
