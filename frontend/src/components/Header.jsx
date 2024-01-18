@@ -34,7 +34,7 @@ export default function Header(props) {
           path="/"
           element={
             <div className="header__login">
-              <p className="header__email">{email}</p>
+              <p className="header__email">{ email }</p>
               <button className="header__exit" onClick={props.signOut}>
                 Выйти
               </button>

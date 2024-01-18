@@ -86,13 +86,13 @@ export default function App() {
 
   function handleLogout() {
     setLoggedIn(false);
-    localStorage.removeItem("token");
+    localStorage.removeItem("jwt");
     navigate("/sign-in", { replace: true });
   }
 
   useEffect(() => {
-    if (localStorage.getItem("token")) {
-      const token = localStorage.getItem("token");
+    if (localStorage.getItem("jwt")) {
+      const token = localStorage.getItem("jwt");
       Auth.getToken(token)
         .then((res) => {
           if (res) {
@@ -102,6 +102,7 @@ export default function App() {
           }
         })
         .catch((error) => {
+          localStorage.removeItem("jwt");
           console.error(error);
         });
     }
