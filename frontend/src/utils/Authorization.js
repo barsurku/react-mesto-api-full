@@ -33,16 +33,15 @@ export function login(email, password) {
     }),
   })
   .then((res) => getResponse(res))
-    .then((data) => {
-      if (data.token) {
-        localStorage.setItem('jwt', data.token);
-        return data;
-      }
+    .then((res) => {
+      
+        localStorage.setItem('token', res.token);
+        return res;
+      
     })
   }
 
-export function getToken() {
-  const token = localStorage.getItem('jwt');
+export function getToken(token) {
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
@@ -52,7 +51,7 @@ export function getToken() {
     },
   })
   .then((res) => getResponse(res))
-  .then((data) => data)
+  .then((res) => res)
   }
 
 export const baseUrl = "http://localhost:3000";

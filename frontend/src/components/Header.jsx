@@ -4,7 +4,6 @@ import logo from "../images/logo.svg";
 import { Routes, Route, Link } from "react-router-dom";
 
 export default function Header(props) {
-  const { email } = props.email;
 
   return (
     <header className="header">
@@ -34,7 +33,7 @@ export default function Header(props) {
           path="/"
           element={
             <div className="header__login">
-              <p className="header__email">{ email }</p>
+              <p className="header__email">{props.email}</p>
               <button className="header__exit" onClick={props.signOut}>
                 Выйти
               </button>

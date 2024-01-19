@@ -38,7 +38,7 @@ export default function App() {
   const [deleteMyCard, setDeleteMyCard] = React.useState();
 
   // вход и регистрация
-  const [email, setEmail] = React.useState({ email: "" });
+  const [email, setEmail] = React.useState('');
   const [registrationSuccess, setregistrationSuccess] = React.useState(false);
   const [loggedIn, setLoggedIn] = React.useState(false);
   const [isInfoTooltipPopup, setIsInfoTooltipPopup] = React.useState(false);
@@ -55,8 +55,7 @@ export default function App() {
   // регистрация
   const handleRegisterUser = (email, password) => {
     Auth.register(email, password)
-      .then((res) => {
-        console.log(res);
+      .then((data) => {
         setregistrationSuccess(true);
         openInfoTooltip();
         navigate("/sign-in", { replace: true });
@@ -73,7 +72,7 @@ export default function App() {
       .then((data) => {
         if (data.token) {
           setLoggedIn(true);
-          setEmail({ email: email });
+          setEmail(email);
           navigate("/", { replace: true });
         }
       })
@@ -86,24 +85,26 @@ export default function App() {
 
   function handleLogout() {
     setLoggedIn(false);
-    localStorage.removeItem("jwt");
+    localStorage.removeItem('token');
     navigate("/sign-in", { replace: true });
   }
 
   useEffect(() => {
-    if (localStorage.getItem("jwt")) {
-      const token = localStorage.getItem("jwt");
+    
+      const token = localStorage.getItem('token');
+      if (token) {
       Auth.getToken(token)
         .then((res) => {
-          if (res) {
+
             setLoggedIn(true);
             setEmail(res.email);
             navigate("/", { replace: true });
-          }
+          
         })
         .catch((error) => {
-          localStorage.removeItem("jwt");
           console.error(error);
+          localStorage.removeItem('token');
+
         });
     }
   }, [navigate]);
