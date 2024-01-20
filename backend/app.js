@@ -15,7 +15,7 @@ app.use(
       'http://localhost:3000',
       'https://barsurku.nomoredomainsmonster.ru',
       'http://barsurku.nomoredomainsmonster.ru',
-      'http://api.barsurku.nomoredomainsmonster.ru',
+      'https://api.barsurku.nomoredomainsmonster.ru',
     ],
     credentials: true,
   }),
