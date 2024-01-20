@@ -1,9 +1,5 @@
  const apiConfig = {
-  url: 'http://localhost:3000',
-  // headers: {
-  //   authorization: '32119456-426d-4754-a261-d86b8af5b953',
-  //   "content-type": "application/json"
-//   }
+  url: 'http://api.barsurku.nomoredomainsmonster.ru',
 };
 
 class Api {
