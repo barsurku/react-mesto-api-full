@@ -13,7 +13,9 @@ app.use(
     origin: [
       'http://localhost:3001',
       'http://localhost:3000',
-      // 'https://mestomagnifico.nomoredomainsmonster.ru',
+      'https://barsurku.nomoredomainsmonster.ru',
+      'http://barsurku.nomoredomainsmonster.ru',
+      'http://api.barsurku.nomoredomainsmonster.ru',
     ],
     credentials: true,
   }),
