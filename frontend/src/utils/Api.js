@@ -1,5 +1,5 @@
  const apiConfig = {
-  url: 'http://api.barsurku.nomoredomainsmonster.ru',
+  url: 'https://api.barsurku.nomoredomainsmonster.ru',
 };
 
 

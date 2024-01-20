@@ -54,4 +54,4 @@ export function getToken(token) {
   .then((res) => res)
   }
 
-export const baseUrl = "http://api.barsurku.nomoredomainsmonster.ru";
+export const baseUrl = "https://api.barsurku.nomoredomainsmonster.ru";
