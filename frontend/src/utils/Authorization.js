@@ -54,4 +54,4 @@ export function getToken(token) {
   .then((res) => res)
   }
 
-export const baseUrl = "http://localhost:3000";
+export const baseUrl = "http://api.barsurku.nomoredomainsmonster.ru";
