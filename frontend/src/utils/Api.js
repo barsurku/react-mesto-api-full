@@ -2,6 +2,7 @@
   url: 'http://api.barsurku.nomoredomainsmonster.ru',
 };
 
+
 class Api {
   #url;
   constructor(apiConfig) {
